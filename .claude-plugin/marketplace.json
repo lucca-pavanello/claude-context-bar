@@ -1,0 +1,6 @@
+{
+  "name": "claude-context-bar",
+  "owner": { "name": "Lucca Pavanello" },
+  "metadata": { "description": "Barra de contexto para o Claude Code" },
+  "plugins": [{ "name": "claude-context-bar", "source": "./" }]
+}

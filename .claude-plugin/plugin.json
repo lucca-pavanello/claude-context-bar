@@ -1,0 +1,6 @@
+{
+  "name": "claude-context-bar",
+  "version": "1.1.0",
+  "description": "Barra de contexto acima do prompt: quanto do chat já foi usado, há quanto tempo está aberto e a hora certa de dar /clear.",
+  "author": { "name": "Lucca Pavanello" }
+}
