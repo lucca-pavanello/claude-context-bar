@@ -1,0 +1,30 @@
+{
+  "name": "claude-context-bar-video",
+  "version": "1.0.0",
+  "description": "Vídeo de divulgação do claude-context-bar (Remotion)",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "@remotion/google-fonts": "4.0.534",
+    "@remotion/media": "4.0.534",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.534",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.39.5",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "render:vertical": "remotion render Vertical out/bruto-9x16.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --image-format=png --audio-codec=aac --audio-bitrate=192k && node scripts/masterizar.mjs out/bruto-9x16.mp4 out/claude-context-bar-9x16.mp4",
+    "render:feed": "remotion render Feed out/bruto-4x5.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --color-space=bt709 --image-format=png --audio-codec=aac --audio-bitrate=192k && node scripts/masterizar.mjs out/bruto-4x5.mp4 out/claude-context-bar-4x5.mp4",
+    "lint": "eslint src && tsc"
+  }
+}
