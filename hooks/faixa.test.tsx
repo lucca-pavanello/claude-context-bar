@@ -16,7 +16,7 @@ test('desktop: faixa SVG com Claudezinho, barra e dados', async ($, on) => {
   on('ui.render', ($: any, e: any) => { const { Box } = $.ui.resolve(e); return <Box /> })
   const t = texto(await $.ui.render({ component: 'AbovePrompt', surface: 'desktop', props: { hasSurvey: false } } as never))
   expect(t).toContain('<svg')
-  expect(t).toContain('Fã do Lucca')
+  expect(t).toContain('Contexto')
   expect(t).toContain('22% · 1h30')
   expect(t).toContain('class="bob"')
   expect(t).not.toContain('/clear')
@@ -27,7 +27,7 @@ test('terminal: faixa em texto com a mesma informação', async ($, on) => {
   on('session.usage', () => ({ value: { startedAt: AGORA - 1.5 * H, context: { window: 1000000, percent: 22.4 }, rateLimits: [] } }))
   on('ui.render', ($: any, e: any) => { const { Box } = $.ui.resolve(e); return <Box /> })
   const t = texto(await $.ui.render({ component: 'AbovePrompt', surface: 'terminal', props: { hasSurvey: false } } as never))
-  expect(t).toContain('Fã do Lucca')
+  expect(t).toContain('Contexto')
   expect(t).toContain('22% · 1h30')
 })
 
@@ -42,5 +42,5 @@ test('chat com mais de 6h avisa o /clear', async ($, on) => {
 test('com pesquisa aberta a faixa some', async ($, on) => {
   on('ui.render', ($: any, e: any) => { const { Box } = $.ui.resolve(e); return <Box /> })
   const t = texto(await $.ui.render({ component: 'AbovePrompt', surface: 'terminal', props: { hasSurvey: true } } as never))
-  expect(t).not.toContain('Fã do Lucca')
+  expect(t).not.toContain('Contexto')
 })

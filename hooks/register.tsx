@@ -224,7 +224,7 @@ const faixaSvg = (pct: number, antes: number, rotulo: string, velho: boolean, ag
     `@media (prefers-reduced-motion:reduce){*{animation:none!important}}` +
     `</style>` +
     `<rect width="${W}" height="${H}" rx="14" fill="${MARROM}"/>` +
-    `<text x="18" y="34" font-size="16" font-weight="700" fill="${CREME}" letter-spacing=".2">Fã do Lucca</text>` +
+    `<text x="18" y="34" font-size="16" font-weight="700" fill="${CREME}" letter-spacing=".2">Contexto</text>` +
     `<rect x="${TRILHO_X}" y="${TRILHO_Y}" width="${TRILHO_W}" height="6" rx="3" fill="${CREME}" fill-opacity=".12"/>` +
     `<rect x="${marca.toFixed(1)}" y="${TRILHO_Y - 2}" width="1.5" height="9" fill="${CREME}" fill-opacity=".35"/>` +
     `<clipPath id="pv${Math.round(pct * 10)}"><rect x="${TRILHO_X}" y="${TRILHO_Y}" width="${fillW.toFixed(1)}" height="6" rx="3"/></clipPath>` +
@@ -266,7 +266,7 @@ export const register: Register = on => {
       return (
         <Svg
           source={faixaSvg(pct, antes, rotulo, velho, agora)}
-          alt={`Fã do Lucca: contexto ${pctTxt}, chat ${tempo(decorrido)}${velho ? ', hora de /clear' : ''}`}
+          alt={`Contexto ${pctTxt}, chat ${tempo(decorrido)}${velho ? ', hora de /clear' : ''}`}
           width={W}
           height={H}
           isInteractive
@@ -280,7 +280,7 @@ export const register: Register = on => {
     return (
       <Box>
         <Text backgroundColor={MARROM} color={TERRACOTA} bold> ▟█▙ </Text>
-        <Text backgroundColor={MARROM} color={CREME} bold>Fã do Lucca </Text>
+        <Text backgroundColor={MARROM} color={CREME} bold>Contexto </Text>
         <Text backgroundColor={MARROM} color={TERRACOTA}>{"━".repeat(cheios)}</Text>
         <Text backgroundColor={MARROM} color={CREME} dimColor>{"─".repeat(16 - cheios)}</Text>
         <Text backgroundColor={MARROM} color={velho ? AMBAR : CREME} bold={velho}> {rotulo} </Text>
