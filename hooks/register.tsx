@@ -256,7 +256,7 @@ export const register: Register = on => {
     const decorrido = agora - startedAt
     const velho = decorrido >= HORAS_CLEAR * 3600000
     const pct = context.percent ?? 0
-    const pctTxt = context.percent === undefined ? '–' : `${Math.round(pct)}%`
+    const pctTxt = context.percent === undefined ? '-' : `${Math.round(pct)}%`
     const rotulo = velho ? `⚠ /clear · ${tempo(decorrido)}` : `${pctTxt} · ${tempo(decorrido)}`
     const antes = pctAnterior
     pctAnterior = pct
